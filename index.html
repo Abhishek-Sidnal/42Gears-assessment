@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar with Edit/Delete</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h2>42Gears</h2>
+        </div>
+        <div class="navbar-right">
+            <button class="nav-icon-btn"><i class="fa fa-bell"></i></button>
+            <button class="nav-icon-btn"><i class="fa fa-cog"></i></button>
+            <div class="hamburger-menu">
+                <i class="fa fa-bars" id="hamburger-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fa fa-times close-btn" id="close-btn"></i>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#"><i class="fa fa-users"></i> Users <i class="fa fa-chevron-down pull-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa fa-user"></i> User List</a></li>
+                        <li><a href="#"><i class="fa fa-user-plus"></i> Add User</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-file-text"></i> Reports</a></li>
+
+                <li>
+                    <a href="#"><i class="fa fa-cogs"></i> Settings <i class="fa fa-chevron-down pull-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa fa-wrench"></i> General</a></li>
+                        <li><a href="#"><i class="fa fa-shield"></i> Security</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#"><i class="fa fa-line-chart"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa fa-book"></i> Documentation</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
+            </ul>
+        </aside>
+
+
+        <div class="content-area">
+            <div class="top-bar">
+                <h2>42Gears</h2>
+                <div class="tools">
+                    <div class="btn-group">
+                        <button id="refresh-btn" class="icon-btn"><i class="fa fa-refresh"></i></button>
+                        <button id="edit-btn" class="icon-btn" disabled><i class="fa fa-pencil"></i></button>
+                        <button id="delete-btn" class="icon-btn" disabled><i class="fa fa-trash"></i></button>
+                    </div>
+                    <input type="text" id="search" placeholder="Search" class="search-bar">
+                </div>
+            </div>
+            <div class="table-area">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID No.</th>
+                            <th>Name</th>
+                            <th>Email ID</th>
+                            <th>Date</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <div class="pages">
+                    <span>Items per page: </span>
+                    <select id="items-per-page">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="page-btns">
+                    <button class="page-btn" id="prev-page" disabled>&lt;</button>
+                    <span class="page-info">1 - 2 of 2</span>
+                    <button class="page-btn" id="next-page">&gt;</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/sidebar.js"></script>
+</body>
+
+</html>
